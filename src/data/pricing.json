@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Design to code",
+    "tag": "UI/UX engineering",
+    "description": "I can move from concept framing and layout decisions into production-ready front-end implementation without losing fidelity.",
+    "features": [
+      "Responsive UI development",
+      "Interaction and visual refinement",
+      "Figma-informed implementation"
+    ],
+    "featured": false
+  },
+  {
+    "name": "Accessibility systems",
+    "tag": "WCAG 2.2 execution",
+    "description": "I build and remediate interfaces with accessibility baked into the structure, behavior, and shared component model.",
+    "features": [
+      "Accessible interaction patterns",
+      "Component-level standards",
+      "Scalable remediation practices"
+    ],
+    "featured": true
+  },
+  {
+    "name": "AI product interfaces",
+    "tag": "Agentic UI patterns",
+    "description": "I have recent hands-on experience shaping front-end experiences for AI-assisted workflows, including custom components and telemetry-aware interaction design.",
+    "features": [
+      "Custom chat UI components",
+      "A2UI and AG-UI familiarity",
+      "Instrumentation-aware design"
+    ],
+    "featured": false
+  }
+]

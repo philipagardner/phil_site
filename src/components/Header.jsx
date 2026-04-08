@@ -1,0 +1,51 @@
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+
+const navItems = [
+  { label: 'Home', to: '/' },
+  { label: 'Work', to: '/work' },
+  { label: 'About', to: '/about' },
+  { label: "Phil's Resume", to: '/resume' },
+  { label: 'GAME!', to: '/game' },
+];
+
+function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <header className="site-header">
+      <div className="container nav-wrap">
+        <NavLink className="brand" to="/" onClick={() => setIsOpen(false)}>
+          <span className="brand-mark">PG</span>
+          <span className="brand-text">Phil Gardner</span>
+        </NavLink>
+        <button
+          className="menu-toggle"
+          type="button"
+          aria-expanded={isOpen}
+          aria-controls="site-nav"
+          onClick={() => setIsOpen((open) => !open)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav className={`site-nav${isOpen ? ' is-open' : ''}`} id="site-nav">
+          {navItems.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.to === '/'}
+              className={({ isActive }) => (isActive ? 'active' : undefined)}
+              onClick={() => setIsOpen(false)}
+            >
+              {item.label}
+            </NavLink>
+          ))}
+        </nav>
+      </div>
+    </header>
+  );
+}
+
+export default Header;

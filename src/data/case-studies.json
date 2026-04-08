@@ -1,0 +1,23 @@
+[
+  {
+    "industry": "Agentic AI",
+    "title": "Custom UI components for an enterprise chatbot",
+    "summary": "Designed and developed agent-specific UI patterns for an AI chatbot that helped employees complete ticketing, self-help, and planning tasks inside a guided interface.",
+    "challenge": "A generic chat surface was not enough for task completion, confidence, and clear action states across multiple agent behaviors.",
+    "outcome": "The experience supported 2.6K IT ticketing actions, 4.4K self-help searches, and 173 PTO plans while capturing telemetry tied to definitive UI interactions."
+  },
+  {
+    "industry": "Internal Platform",
+    "title": "Internal AppStore redesign at enterprise scale",
+    "summary": "Led UI work that modernized the internal AppStore experience used for application access and request workflows across a massive employee population.",
+    "challenge": "The product had to support very high traffic, a broad catalog, and diverse user needs without increasing friction.",
+    "outcome": "The resulting experience supported 1.8 million requests annually from roughly 300k unique recipients across a catalog of 4k applications."
+  },
+  {
+    "industry": "Employee Experience",
+    "title": "Onboarding and request flow modernization",
+    "summary": "Owned front-end delivery for onboarding and request experiences that needed to feel clearer, faster, and more consistent for a very large internal audience.",
+    "challenge": "Legacy workflows and fragmented UI patterns created unnecessary effort for users and administrative teams.",
+    "outcome": "The overhaul contributed to an estimated $427k saved over three years, supported 173k new hires, and eliminated roughly 3.7k hours of employee work."
+  }
+]
