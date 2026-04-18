@@ -14,7 +14,8 @@ function Footer() {
         <div className="footer-links">
           <Link to="/about">About</Link>
           <Link to="/resume">Phil's Resume</Link>
-          <Link to="/game">GAME!</Link>
+          <Link to="/game">Snake</Link>
+          <Link to="/space-invaders">Space Invaders</Link>
         </div>
       </div>
       <div className="container footer-meta">

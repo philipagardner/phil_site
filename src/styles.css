@@ -859,7 +859,170 @@ textarea {
     .resume-metrics {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+}
 
+.game-page {
+    padding: 2rem 0;
+}
+
+.game-menu {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.game-menu h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.game-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.game-link {
+    padding: 0.75rem 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.game-link:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+.space-invaders {
+    text-align: center;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto 1rem;
+}
+
+.game-header h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.5rem;
+}
+
+.game-stats {
+    display: flex;
+    gap: 1.5rem;
+    font-weight: 600;
+}
+
+.game-container {
+    position: relative;
+    display: inline-block;
+}
+
+.game-canvas {
+    border: 2px solid var(--line);
+    border-radius: var(--radius-md);
+    display: block;
+}
+
+.game-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 10, 15, 0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    color: white;
+}
+
+.game-overlay h2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.game-overlay p {
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.game-controls {
+    margin-top: 1rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-trigger {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    background: none;
+    border: none;
+    font-size: inherit;
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--surface-strong);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow);
+    min-width: 160px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.2s ease;
+    z-index: 100;
+}
+
+.nav-dropdown-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--text);
+    text-decoration: none;
+    transition: background 0.15s ease;
+}
+
+.nav-dropdown-menu a:hover {
+    background: var(--bg);
+}
+
+.nav-dropdown-menu a.active {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+@media (max-width: 960px) {
     .hero-grid,
     .resume-layout,
     .resume-grid,

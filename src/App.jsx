@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import GamePage from './pages/GamePage';
 import ResumePage from './pages/ResumePage';
+import SpaceInvaders from './components/SpaceInvaders';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/resume" element={<ResumePage />} />
         <Route path="/game" element={<GamePage />} />
+        <Route path="/space-invaders" element={<SpaceInvaders />} />
       </Route>
     </Routes>
   );

@@ -5,11 +5,16 @@ const navItems = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
   { label: "Phil's Resume", to: '/resume' },
-  { label: 'GAME!', to: '/game' },
+];
+
+const gameItems = [
+  { label: 'Snake', to: '/game' },
+  { label: 'Space Invaders', to: '/space-invaders' },
 ];
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [gameDropdownOpen, setGameDropdownOpen] = useState(false);
 
   return (
     <header className="site-header">
@@ -41,6 +46,28 @@ function Header() {
               {item.label}
             </NavLink>
           ))}
+          <div
+            className="nav-dropdown"
+            onMouseEnter={() => setGameDropdownOpen(true)}
+            onMouseLeave={() => setGameDropdownOpen(false)}
+          >
+            <span className="nav-dropdown-trigger">GAME! ▾</span>
+            <div className={`nav-dropdown-menu${gameDropdownOpen ? ' is-open' : ''}`}>
+              {gameItems.map((item) => (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  className={({ isActive }) => (isActive ? 'active' : undefined)}
+                  onClick={() => {
+                    setIsOpen(false);
+                    setGameDropdownOpen(false);
+                  }}
+                >
+                  {item.label}
+                </NavLink>
+              ))}
+            </div>
+          </div>
         </nav>
       </div>
     </header>
