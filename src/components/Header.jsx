@@ -9,7 +9,7 @@ const navItems = [
 
 const gameItems = [
   { label: 'Snake', to: '/game' },
-  { label: 'Space Invaders', to: '/space-invaders' },
+  { label: 'Sleep Invaders', to: '/space-invaders' },
 ];
 
 function Header() {
