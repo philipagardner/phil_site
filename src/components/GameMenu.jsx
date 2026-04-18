@@ -7,7 +7,7 @@ function GameMenu() {
           Snake
         </a>
         <a href="/game/space-invaders" className="game-link">
-          Space Invaders
+          Sleep Invaders
         </a>
       </div>
     </div>
