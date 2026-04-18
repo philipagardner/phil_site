@@ -1,5 +1,8 @@
 import PageHero from '../components/PageHero';
 import CaseStudiesSection from '../components/CaseStudiesSection';
+import philAndSamara from '../assets/images/phil-and-samara.jpg';
+import ruffRidge from '../assets/images/ruff-ridge-1.jpg';
+import myReflection from '../assets/images/my-reflection.jpg';
 
 const approach = [
   {
@@ -36,6 +39,16 @@ function AboutPage() {
         title="A front-end engineer with deep experience in enterprise UX, accessibility, and UI systems."
         description="My background sits at the intersection of design and engineering: shaping interfaces, building reusable components, and making complex product workflows easier to navigate."
       />
+
+      <section className="section">
+        <div className="container">
+          <div className="about-photos">
+            <img src={philAndSamara} alt="Phil and Samara" className="about-photo" />
+            <img src={ruffRidge} alt="Ruff Ridge" className="about-photo" />
+            <img src={myReflection} alt="My Reflection" className="about-photo" />
+          </div>
+        </div>
+      </section>
 
       <section className="section">
         <div className="container split-layout">

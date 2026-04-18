@@ -13,7 +13,7 @@
     --radius-lg: 28px;
     --radius-md: 20px;
     --radius-sm: 14px;
-    --max-width: 1160px;
+    --max-width: 90%;
 }
 
 * {
@@ -138,7 +138,7 @@ textarea {
 
 .hero,
 .page-hero {
-    padding: 5.5rem 0 3rem;
+    padding: 4rem 0 3rem;
 }
 
 .hero-grid,
@@ -147,7 +147,7 @@ textarea {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
-    align-items: center;
+    align-items: start;
 }
 
 .hero-copy h1,
@@ -276,7 +276,7 @@ textarea {
 }
 
 .panel-card {
-    padding: 1.6rem;
+    padding: 1rem 1.6rem;
     border-radius: var(--radius-lg);
 }
 
@@ -311,8 +311,13 @@ textarea {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.08));
 }
 
+.temp-section {
+    background-color: darksalmon;
+}
+
 .section-heading {
-    max-width: 50rem;
+    /* max-width: 50rem; */
+    max-width: 90%;
     margin-bottom: 2rem;
 }
 
@@ -320,7 +325,7 @@ textarea {
 .split-layout h2,
 .cta-banner h2 {
     font-size: clamp(2rem, 4vw, 3.2rem);
-    max-width: 14ch;
+    /* max-width: 14ch; */
 }
 
 .resume-layout,
@@ -780,7 +785,8 @@ textarea {
 }
 
 .quote-text {
-    margin-top: 0.5rem;
+    margin-top: 0px;
+    font-style: italic;
 }
 
 .quote-card strong {
@@ -829,7 +835,25 @@ textarea {
     margin-bottom: 0.8rem;
 }
 
+.about-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.about-photo {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
+}
+
 @media (max-width: 960px) {
+    .about-photos {
+        grid-template-columns: 1fr;
+    }
+
     .three-up,
     .steps-grid,
     .resume-metrics {
@@ -933,4 +957,58 @@ textarea {
     .resume-meta {
         text-align: left;
     }
+}
+
+.brag-text {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.phil-ul { 
+    list-style-type: "⊸  "; 
+}
+
+.phil-ul, li { 
+    padding-bottom: 6px; 
+}
+
+.phil-ol, li { 
+    padding-bottom: 6px; 
+}
+
+/*flex width utilities*/
+.flex-1 {
+    flex: 1;
+}
+.flex-2 {
+    flex: 2;
+}
+.flex-3 {
+    flex: 3;
+}
+.flex-4 {
+    flex: 4;
+}
+.flex-5 {
+    flex: 5;
+}
+.flex-6 {
+    flex: 6;
+}
+.flex-7 {
+    flex: 7;
+}
+.flex-8 {
+    flex: 8;
+}
+.flex-9 {
+    flex: 9;
+}
+.flex-10 {
+    flex: 10;
+}
+
+.flex-space-evenly {
+    display: flex;
+    justify-content: space-evenly;
 }

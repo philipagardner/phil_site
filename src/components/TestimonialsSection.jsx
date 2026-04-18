@@ -13,8 +13,7 @@ function TestimonialsSection() {
         <div className="card-grid three-up">
           {testimonials.map((item) => (
             <article className="quote-card" key={item.name}>
-              <p className="quote-mark">“</p>
-              <p className="quote-text">{item.quote}</p>
+              <p className="quote-text">"{item.quote}"</p>
               <strong>{item.name}</strong>
               <span>{item.role}</span>
             </article>

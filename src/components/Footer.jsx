@@ -12,7 +12,6 @@ function Footer() {
           <p>UX engineer and front-end developer focused on accessible product interfaces, AI chat UI, and responsive design systems.</p>
         </div>
         <div className="footer-links">
-          <Link to="/work">Work</Link>
           <Link to="/about">About</Link>
           <Link to="/resume">Phil's Resume</Link>
           <Link to="/game">GAME!</Link>
