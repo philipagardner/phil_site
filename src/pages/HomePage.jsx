@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import TestimonialsSection from '../components/TestimonialsSection';
 import PageHero from '../components/PageHero';
 import PricingSection from '../components/PricingSection';
+import { useState, useEffect } from 'react';
 
 const services = [
   {
@@ -55,6 +56,57 @@ const reasons = [
     description: 'I care about shipped outcomes, adoption, and the signals that prove whether a UI is actually improving work.',
   },
 ];
+
+const workProcess = [
+  {
+    title: 'Design',
+    icon: '✏️',
+    items: ['Mockups', 'User Interviews', 'Persona Analysis'],
+  },
+  {
+    title: 'Development',
+    icon: '⚡',
+    items: ['HTML/CSS code', 'Back-end Integration', 'Accessibility Standard Implementation'],
+  },
+  {
+    title: 'Deployment',
+    icon: '🚀',
+    items: ['Version Controlled Iterative Releases', 'QE Testing & Stakeholder Review', 'Production-ready Code'],
+  },
+];
+
+function WorkProcessAnimation() {
+  return (
+    <div className="work-process">
+      <div className="process-list">
+        {workProcess.map((step, index) => (
+          <div 
+            key={step.title} 
+            className="process-card"
+            style={{ animationDelay: `${index * 0.3}s` }}
+          >
+            <div className="process-header">
+              <div className="process-icon">{step.icon}</div>
+              <h3 className="process-title">{step.title}</h3>
+            </div>
+            <div className="process-items">
+              {step.items.map((item, i) => (
+                <div 
+                  key={item} 
+                  className="process-item"
+                  style={{ animationDelay: `${index * 0.3 + 0.2 + i * 0.15}s` }}
+                >
+                  <span className="item-bullet">●</span>
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function HomePage() {
   return (
@@ -121,6 +173,15 @@ function HomePage() {
           <div className="flex-1 flex-space-evenly">
           <a className="button button-primary" href="mailto:Philipgardner7@gmail.com">Email Me</a>
           </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-heading">
+            <h2>What I do.</h2>
+          </div>
+          <WorkProcessAnimation />
         </div>
       </section>
 

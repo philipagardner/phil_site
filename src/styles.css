@@ -999,6 +999,83 @@ textarea {
     z-index: 100;
 }
 
+.work-process {
+    max-width: 90%;
+    margin: 2rem auto 0;
+}
+
+.process-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.process-card {
+    padding: 1.5rem 2rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    align-items: start;
+    animation: fadeInUp 0.6s ease both;
+    background-color: #FFFFFF;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.process-card .process-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.process-icon {
+    font-size: 1.5rem;
+}
+
+.process-title {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin: 0;
+}
+
+.process-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.process-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+    color: var(--text);
+    animation: fadeIn 0.4s ease both;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.item-bullet {
+    color: var(--primary);
+    font-size: 0.7rem;
+}
+
 .nav-dropdown-menu.is-open {
     opacity: 1;
     visibility: visible;
