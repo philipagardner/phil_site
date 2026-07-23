@@ -19,6 +19,7 @@ import serviceNowImage from '../assets/images/servicenow.png';
 import trainingImage from '../assets/images/training.png';
 import visualStudioCodeImage from '../assets/images/Visual_Studio_Code.png';
 import w3cImage from '../assets/images/w3c.png';
+import heroImage from '../assets/images/hero-image.png';
 
 const services = [
 {
@@ -152,6 +153,9 @@ return (
           <p className="hero-text">
             Hey! I'm Phil Gardner, a guru of responsive front-end development, WCAG 2.2 accessibility, and custom UI for agentic AI experiences.
           </p>
+        </div>
+        <div className="hero-copy">
+  <img src={heroImage} alt="Phil Gardner" className="hero-image" />
         </div>
       </div>
     </section>

@@ -299,6 +299,13 @@ textarea {
     font-weight: 600;
 }
 
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+}
+
 .panel-card,
 .info-card,
 .service-card,
