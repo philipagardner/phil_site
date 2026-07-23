@@ -141,7 +141,12 @@ textarea {
     padding: 4rem 0 3rem;
 }
 
-.hero-grid,
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
 .split-layout,
 .contact-grid {
     display: grid;
@@ -173,7 +178,10 @@ textarea {
     font-size: clamp(2.6rem, 6vw, 4.6rem);
 }
 
-.hero-text,
+.hero-text {
+    font-size: 22px;
+}
+
 .page-hero p,
 .section-heading p,
 .info-card p,
@@ -258,6 +266,39 @@ textarea {
     gap: 1rem;
 }
 
+.projects-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.5rem;
+}
+
+.icon-list-section {
+    overflow-x: auto;
+}
+
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(90px, 1fr));
+    gap: 1rem;
+}
+
+.icon-grid-item {
+    text-align: center;
+}
+
+.icon-grid-image {
+    width: auto;
+    height: 72px;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+.icon-grid-item p {
+    margin: 0.5rem 0 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
 .panel-card,
 .info-card,
 .service-card,
@@ -278,12 +319,6 @@ textarea {
 .panel-card {
     padding: 1rem 1.6rem;
     border-radius: var(--radius-lg);
-}
-
-.panel-card p,
-.panel-card span {
-    color: var(--muted);
-    margin: 0;
 }
 
 .panel-card strong {
@@ -1251,4 +1286,29 @@ textarea {
 .flex-space-evenly {
     display: flex;
     justify-content: space-evenly;
+}
+
+
+
+/*TEXT STYLING*/
+.panel-title {
+    font-weight: 600;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-family: "Space Grotesk", sans-serif;
+    color: #0b5751;
+    border-bottom: 3px solid #0b5751;
+}
+
+.panel-highlight {
+    font-weight: 600;
+    font-size: clamp(1.5rem, 3.5vw, 1.8rem);
+    font-family: "Space Grotesk", sans-serif;
+    color: #172126;
+}
+
+.panel-description {
+    font-weight: 600;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    font-family: "Space Grotesk", sans-serif;
+    color: #172126;
 }

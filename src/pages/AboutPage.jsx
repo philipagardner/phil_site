@@ -20,9 +20,9 @@ const approach = [
 ];
 
 const values = [
-  { title: 'Clarity', description: 'Interfaces should lower cognitive load, communicate hierarchy, and make the next step obvious.' },
-  { title: 'Craft', description: 'Responsive behavior, spacing, contrast, and interaction states matter because users notice quality immediately.' },
-  { title: 'Ownership', description: 'I am comfortable carrying work from concept through shipped front-end implementation and iteration.' },
+  { title: 'Clarity', description: 'Interfaces should do what is expected.' },
+  { title: 'Functionality', description: 'Responsive behavior, spacing, contrast-- a bad interaction will immediately make someone not trust the company.' },
+  { title: 'Responsiveness', description: 'It\'s 2026, every company site should work perfectly on mobile devices.' },
 ];
 
 const team = [
@@ -54,7 +54,7 @@ function AboutPage() {
         <div className="container split-layout">
           <div>
             <p className="eyebrow">Approach</p>
-            <h2>I focus on products that need both interaction quality and implementation rigor.</h2>
+            <h2>Honestly, I think things should just be simple.</h2>
           </div>
           <div className="feature-list">
             {approach.map((item) => (
@@ -70,8 +70,7 @@ function AboutPage() {
       <section className="section section-alt">
         <div className="container">
           <div className="section-heading">
-            <p className="eyebrow">Working principles</p>
-            <h2>The standards behind how I design and build front-end systems.</h2>
+            <h2>Here's my opinion.</h2>
           </div>
           <div className="card-grid three-up">
             {values.map((item) => (
@@ -89,8 +88,8 @@ function AboutPage() {
       <section className="section">
         <div className="container">
           <div className="section-heading">
-            <p className="eyebrow">Experience snapshot</p>
-            <h2>The environments that shaped how I work.</h2>
+            <p className="eyebrow">My Muses</p>
+            <h2>What keeps me going</h2>
           </div>
           <div className="card-grid three-up">
             {team.map((member) => (

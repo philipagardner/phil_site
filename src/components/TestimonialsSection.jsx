@@ -7,7 +7,7 @@ function TestimonialsSection() {
       <div className="container">
         <SectionHeading
           eyebrow="Feedback"
-          title="Representative stakeholder feedback from high-visibility internal product work."
+          title="What others say about me."
           description="These quotes are written to reflect the kind of cross-functional feedback that follows strong UI ownership, accessible delivery, and reliable collaboration."
         />
         <div className="card-grid three-up">
