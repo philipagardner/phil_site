@@ -51,7 +51,7 @@ function Header() {
             onMouseEnter={() => setGameDropdownOpen(true)}
             onMouseLeave={() => setGameDropdownOpen(false)}
           >
-            <span className="nav-dropdown-trigger">GAME! ▾</span>
+            <span className="nav-dropdown-trigger">GAMES! ▾</span>
             <div className={`nav-dropdown-menu${gameDropdownOpen ? ' is-open' : ''}`}>
               {gameItems.map((item) => (
                 <NavLink

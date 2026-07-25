@@ -145,7 +145,7 @@ return (
 function HomePage() {
 return (
   <>
-    <section className="hero">
+    <section className="hero" style={{ backgroundImage: `url(${heroImage})`, backgroundPosition: 'right center', backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}>
       <div className="container hero-grid">
         <div className="hero-copy">
           <p className="eyebrow">UI/UX Development, AI Component Integration, Accessibility Specialist</p>
@@ -153,9 +153,6 @@ return (
           <p className="hero-text">
             Hey! I'm Phil Gardner, a guru of responsive front-end development, WCAG 2.2 accessibility, and custom UI for agentic AI experiences.
           </p>
-        </div>
-        <div className="hero-copy">
-  <img src={heroImage} alt="Phil Gardner" className="hero-image" />
         </div>
       </div>
     </section>
@@ -251,13 +248,29 @@ return (
       </div>
     </section> */}
 
-          <section className="section">
+
+    <TestimonialsSection />
+
+    {/*
+    <section className="section">
+      <div className="container cta-banner">
+        <div className="flex-5">
+        <WorkProcessAnimation />
+        </div>
+        <div className="flex-1 flex-space-evenly">
+        <a className="button button-primary" href="mailto:Philipgardner7@gmail.com">Email Me</a>
+        </div>
+      </div>
+    </section>
+    */}
+
+    <section className="section">
       <div className="container cta-banner">
         <div className="flex-5">
           <h2>I can deliver the entire process </h2>
           <div className="brag-text">
             <ol className='phil-ol'>
-              <li>UX design and prototyping</li>
+              <li>UI/UX design and prototyping</li>
               <li>Production-ready front-end code</li>
               <li>Accessibility implementation and testing</li>
               <li>Software deployment and monitoring</li>
@@ -269,17 +282,6 @@ return (
         </div>
       </div>
     </section>
-
-    <section className="section">
-      <div className="container">
-        <div className="section-heading">
-          <h2>What I do.</h2>
-        </div>
-        <WorkProcessAnimation />
-      </div>
-    </section>
-
-    <TestimonialsSection />
 
     {/*
     <PageHero

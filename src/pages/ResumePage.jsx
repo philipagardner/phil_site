@@ -54,10 +54,8 @@ const experience = [
 function ResumePage() {
   return (
     <>
-      <PageHero
-        eyebrow="Resume"
+      <PageHero className="resume-hero"
         title="Phil's Resume"
-        description="A web-formatted version of Phil A. Gardner's resume, focused on UX engineering, accessible front-end systems, and AI interface work."
       />
 
       <section className="section">

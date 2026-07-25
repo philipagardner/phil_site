@@ -141,6 +141,10 @@ textarea {
     padding: 4rem 0 3rem;
 }
 
+.hero {
+    min-height: 480px;
+}
+
 .hero-grid {
     display: grid;
     grid-template-columns: 1.4fr 1fr;
@@ -180,6 +184,11 @@ textarea {
 
 .hero-text {
     font-size: 22px;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
 }
 
 .page-hero p,
@@ -299,12 +308,7 @@ textarea {
     font-weight: 600;
 }
 
-.hero-image {
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius-lg);
-    object-fit: cover;
-}
+
 
 .panel-card,
 .info-card,

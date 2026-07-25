@@ -6,7 +6,6 @@ function TestimonialsSection() {
     <section className="section section-alt">
       <div className="container">
         <SectionHeading
-          eyebrow="Feedback"
           title="What others say about me."
           description="These quotes are written to reflect the kind of cross-functional feedback that follows strong UI ownership, accessible delivery, and reliable collaboration."
         />

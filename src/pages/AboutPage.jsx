@@ -26,9 +26,9 @@ const values = [
 ];
 
 const team = [
-  { title: 'Optum AI Team', description: 'Built custom UI for an AI chatbot, including agent-specific components and telemetry-aware interactions.' },
-  { title: 'UX Infrastructure Team', description: 'Led front-end work across an internal AppStore, onboarding portal, and a broad catalog of forms used at enterprise scale.' },
-  { title: 'Education', description: 'B.S. in Business Administration, Computer Information Systems, Appalachian State University.' },
+  { title: 'Family', description: '' },
+  { title: 'Helping Others', description: '' },
+  { title: 'Having Fun', description: '' },
 ];
 
 function AboutPage() {
@@ -36,8 +36,8 @@ function AboutPage() {
     <>
       <PageHero
         eyebrow="About Phil"
-        title="A front-end engineer with deep experience in enterprise UX, accessibility, and UI systems."
-        description="My background sits at the intersection of design and engineering: shaping interfaces, building reusable components, and making complex product workflows easier to navigate."
+        title="Sitting at the intersection of design and engineering."
+        description=""
       />
 
       <section className="section">
@@ -50,6 +50,15 @@ function AboutPage() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="container">
+          <div className="about-text">
+            Hello!
+          </div>
+        </div>
+      </section>
+
+      {/*
       <section className="section">
         <div className="container split-layout">
           <div>
@@ -84,11 +93,11 @@ function AboutPage() {
       </section>
 
       <CaseStudiesSection />
-
+      */}
       <section className="section">
         <div className="container">
           <div className="section-heading">
-            <p className="eyebrow">My Muses</p>
+           {/* <p className="eyebrow">My Muses</p> */}
             <h2>What keeps me going</h2>
           </div>
           <div className="card-grid three-up">
