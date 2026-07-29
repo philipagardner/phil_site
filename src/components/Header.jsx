@@ -46,8 +46,15 @@ function Header() {
               {item.label}
             </NavLink>
           ))}
+          <NavLink
+            to="/games"
+            className={({ isActive }) => `mobile-only${isActive ? ' active' : ''}`}
+            onClick={() => setIsOpen(false)}
+          >
+            GAMES!
+          </NavLink>
           <div
-            className="nav-dropdown"
+            className="nav-dropdown desktop-only"
             onMouseEnter={() => setGameDropdownOpen(true)}
             onMouseLeave={() => setGameDropdownOpen(false)}
           >

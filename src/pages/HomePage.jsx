@@ -145,7 +145,7 @@ return (
 function HomePage() {
 return (
   <>
-    <section className="hero" style={{ backgroundImage: `url(${heroImage})`, backgroundPosition: 'right center', backgroundSize: 'contain', backgroundRepeat: 'no-repeat' }}>
+    <section className="hero hero-with-bg" style={{ '--hero-image': `url(${heroImage})` }}>
       <div className="container hero-grid">
         <div className="hero-copy">
           <p className="eyebrow">UI/UX Development, AI Component Integration, Accessibility Specialist</p>
@@ -173,7 +173,7 @@ return (
       </div>
     </section>
 
-    <section className="projects">
+    <section className="section projects">
 
       <div className=" container">
         <div className="section-heading">
@@ -182,49 +182,63 @@ return (
         <div className="projects-panel">
           <div className="panel-card">
             <div className="panel-title">Enterprise AppStore</div>
-            <span>
-            <span className="panel-highlight">1.8M </span>
-            <span className="panel-description">Software installs requested per year</span>
-                          <div></div>
-            <span className="panel-highlight">300k </span>
-            <span className="panel-description">Unique recipients</span>
-            <div></div>
-            <span className="panel-highlight">4k+ </span>
-            <span className="panel-description">Applications supported</span>
-            </span>
+            <div className="panel-metric">
+              <span className="panel-highlight">1.8M</span>
+              <span className="panel-description">Software installs requested per year</span>
+            </div>
+            <div className="panel-metric">
+              <span className="panel-highlight">300k</span>
+              <span className="panel-description">Unique recipients</span>
+            </div>
+            <div className="panel-metric">
+              <span className="panel-highlight">4k+</span>
+              <span className="panel-description">Applications supported</span>
+            </div>
           </div>
             <div className="panel-card">
               <div className="panel-title">Agentic AI Chatbot</div>
-              <span className="panel-highlight">2.6K </span>
-              <span className="panel-description">AI-assisted ticket actions</span>
-              <div></div>
-              <span className="panel-highlight">A2UI & AG-UI </span>
-              <span className="panel-description">Custom UI components</span>
-                              <div></div>
-              <span className="panel-highlight">Telemetry </span>
-              <span className="panel-description">Integration on UI actions</span>
+              <div className="panel-metric">
+                <span className="panel-highlight">2.6K</span>
+                <span className="panel-description">AI-assisted ticket actions</span>
+              </div>
+              <div className="panel-metric">
+                <span className="panel-highlight">A2UI & AG-UI</span>
+                <span className="panel-description">Custom UI components</span>
+              </div>
+              <div className="panel-metric">
+                <span className="panel-highlight">Telemetry</span>
+                <span className="panel-description">Integration on UI actions</span>
+              </div>
             </div>
             <div className="panel-card">
               <div className="panel-title">Employee Onboarding Portal</div>
-              <span className="panel-highlight">173k </span>
-              <span className="panel-description">New hires processed annually</span>
-              <div></div>
-              <span className="panel-highlight">$427k </span>
-              <span className="panel-description">Saved over 3 years</span>
-                              <div></div>
-              <span className="panel-highlight">3.7k </span>
-              <span className="panel-description">Employee hours saved</span>
+              <div className="panel-metric">
+                <span className="panel-highlight">173k</span>
+                <span className="panel-description">New hires processed annually</span>
+              </div>
+              <div className="panel-metric">
+                <span className="panel-highlight">$427k</span>
+                <span className="panel-description">Saved over 3 years</span>
+              </div>
+              <div className="panel-metric">
+                <span className="panel-highlight">3.7k</span>
+                <span className="panel-description">Employee hours saved</span>
+              </div>
             </div>
                         <div className="panel-card">
               <div className="panel-title">UI/UX & Web Accessibility</div>
-              <span className="panel-highlight">100% </span>
-              <span className="panel-description">Responsiveness with flexbox and CSS grid</span>
-              <div></div>
-              <span className="panel-highlight">97% </span>
-              <span className="panel-description">WCAG compliance (per Axe DevTools)</span>
-                              <div></div>
-              <span className="panel-highlight">Dynamic </span>
-              <span className="panel-description">standardized UI component library</span>
+              <div className="panel-metric">
+                <span className="panel-highlight">100%</span>
+                <span className="panel-description">Responsiveness with flexbox and CSS grid</span>
+              </div>
+              <div className="panel-metric">
+                <span className="panel-highlight">97%</span>
+                <span className="panel-description">WCAG compliance (per Axe DevTools)</span>
+              </div>
+              <div className="panel-metric">
+                <span className="panel-highlight">Dynamic</span>
+                <span className="panel-description">standardized UI component library</span>
+              </div>
             </div>
           </div>
           </div>

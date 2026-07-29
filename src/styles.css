@@ -136,20 +136,39 @@ textarea {
     border-radius: 999px;
 }
 
-.hero,
 .page-hero {
     padding: 4rem 0 3rem;
 }
 
 .hero {
-    min-height: 480px;
+    padding: 2rem 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 560px;
+}
+
+.hero-with-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--hero-image);
+    background-repeat: no-repeat;
+    background-position: calc(100% + 6.5rem) center;
+    background-size: min(74%, 1120px);
+    opacity: 0.98;
+    pointer-events: none;
+    z-index: 0;
+    padding: 0px;
 }
 
 .hero-grid {
     display: grid;
     grid-template-columns: 1.4fr 1fr;
     gap: 2rem;
-    align-items: start;
+    align-items: stretch;
+    min-height: inherit;
+    position: relative;
+    z-index: 1;
 }
 .split-layout,
 .contact-grid {
@@ -178,12 +197,29 @@ textarea {
     width: 100%;
 }
 
+.hero-copy {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 1.25rem 1rem 0;
+    background:
+   linear-gradient(226deg, rgba(235, 236, 229, .85), rgba(246, 238, 228, .65) 25%, transparent 40%), 
+   linear-gradient(306deg, rgba(243, 240, 233, .85), rgba(248, 243, 235, .65) 35%, transparent 45%);
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
 .page-hero h1 {
     font-size: clamp(2.6rem, 6vw, 4.6rem);
 }
 
 .hero-text {
     font-size: 22px;
+    width: 90%;
 }
 
 .about-text {
@@ -282,7 +318,7 @@ textarea {
 }
 
 .icon-list-section {
-    overflow-x: auto;
+    overflow-x: visible;
 }
 
 .icon-grid {
@@ -304,7 +340,7 @@ textarea {
 
 .icon-grid-item p {
     margin: 0.5rem 0 0;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 600;
 }
 
@@ -328,8 +364,12 @@ textarea {
 }
 
 .panel-card {
-    padding: 1rem 1.6rem;
-    border-radius: var(--radius-lg);
+    position: relative;
+    padding: 1.2rem 1.3rem;
+    border-radius: 18px;
+    border: 1px solid rgba(11, 87, 81, 0.2);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.76));
+    box-shadow: 0 14px 28px rgba(17, 34, 34, 0.1);
 }
 
 .panel-card strong {
@@ -347,6 +387,13 @@ textarea {
 .panel-card-accent p,
 .panel-card-accent span {
     color: rgba(255, 255, 255, 0.76);
+}
+
+.panel-metric {
+    display: flex;
+    align-items: baseline;
+    gap: 0.45rem;
+    padding: 0.35rem 0;
 }
 
 .section {
@@ -372,6 +419,21 @@ textarea {
 .cta-banner h2 {
     font-size: clamp(2rem, 4vw, 3.2rem);
     /* max-width: 14ch; */
+}
+
+.section-heading h2 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.section-heading h2::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, rgb(11 87 81), rgb(14 110 102));
 }
 
 .resume-layout,
@@ -1145,6 +1207,46 @@ textarea {
     font-weight: 600;
 }
 
+.mobile-only {
+    display: none;
+}
+
+.desktop-only {
+    display: block;
+}
+
+.games-notice-page {
+    min-height: 56vh;
+    display: grid;
+    align-items: center;
+}
+
+.games-notice-wrap {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.games-notice-image {
+    width: clamp(120px, 22vw, 180px);
+    height: auto;
+}
+
+.games-notice-text {
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(1.3rem, 2.4vw, 2rem);
+    font-weight: 700;
+    color: var(--text);
+}
+
+@media (max-width: 1250px) {
+    .projects-panel {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 960px) {
     .hero-grid,
     .resume-layout,
@@ -1166,10 +1268,43 @@ textarea {
         max-width: 100%;
     }
 
+    .hero {
+        min-height: unset;
+}
+
+    .hero-copy {
+        height: auto;
+        justify-content: flex-start;
+        padding: 1rem 1rem 0.75rem 0;
+    background:
+   linear-gradient(226deg, rgba(235, 236, 229, .85), rgba(246, 238, 228, .65) 45%, transparent 80%), 
+   linear-gradient(306deg, rgba(243, 240, 233, .85), rgba(248, 243, 235, .65) 50%, transparent 85%);
+    }
+
+    .hero-with-bg::after {
+        background-size: min(64%, 620px);
+        background-position: calc(100% + 1rem) center;
+        opacity: 0.32;
+    }
+
     .game-board-wrap {
         max-width: 34rem;
         width: 100%;
         margin: 0 auto;
+    }
+}
+
+@media (max-width: 1000px) {
+    .mobile-only {
+        display: block;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .icon-grid {
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
     }
 }
 
@@ -1204,6 +1339,14 @@ textarea {
     .hero,
     .page-hero {
         padding-top: 4rem;
+    }
+
+    .hero-with-bg::after {
+        display: none;
+    }
+
+    .hero-copy {
+        padding-right: 0;
     }
 
     .three-up,
@@ -1303,23 +1446,57 @@ textarea {
 
 /*TEXT STYLING*/
 .panel-title {
-    font-weight: 600;
-    font-size: clamp(1.2rem, 3vw, 2rem);
+    margin: 0 0 0.9rem;
+    padding-left: 0.75rem;
+    border-bottom: none;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    font-size: clamp(1.3rem, 2.4vw, 1.95rem);
     font-family: "Space Grotesk", sans-serif;
     color: #0b5751;
-    border-bottom: 3px solid #0b5751;
+    position: relative;
+}
+
+.panel-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.12rem;
+    width: 4px;
+    height: 1.15em;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #0b5751, #16a085);
 }
 
 .panel-highlight {
-    font-weight: 600;
-    font-size: clamp(1.5rem, 3.5vw, 1.8rem);
+    display: inline-block;
+    margin-top: 0.1rem;
+    padding: 0.18rem 0.5rem;
+    border-radius: 9px;
+    background: rgba(15, 118, 110, 0.09);
+    font-weight: 800;
+    font-size: clamp(1.2rem, 2.7vw, 1.6rem);
     font-family: "Space Grotesk", sans-serif;
     color: #172126;
 }
 
+/*
+.panel-metric::before {
+content: "";
+    left: 0;
+    top: 0.12rem;
+    width: 4px;
+    height: 1.15em;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #0b5751, #16a085);
+}
+    */
+
 .panel-description {
-    font-weight: 600;
-    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    display: inline-block;
+    font-weight: 500;
+    font-size: clamp(0.98rem, 2.1vw, 1.3rem);
+    line-height: 1.45;
     font-family: "Space Grotesk", sans-serif;
-    color: #172126;
+    color: #253130;
 }

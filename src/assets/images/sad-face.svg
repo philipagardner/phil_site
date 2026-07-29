@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Sad face">
+  <defs>
+    <radialGradient id="faceFill" cx="35%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#fff7b8"/>
+      <stop offset="100%" stop-color="#f2c94c"/>
+    </radialGradient>
+  </defs>
+  <circle cx="120" cy="120" r="100" fill="url(#faceFill)" stroke="#b08900" stroke-width="8"/>
+  <circle cx="84" cy="98" r="11" fill="#1f2933"/>
+  <circle cx="156" cy="98" r="11" fill="#1f2933"/>
+  <path d="M78 166c9-16 23-24 42-24s33 8 42 24" fill="none" stroke="#1f2933" stroke-width="10" stroke-linecap="round"/>
+</svg>

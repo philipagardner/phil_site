@@ -7,7 +7,7 @@ function TestimonialsSection() {
       <div className="container">
         <SectionHeading
           title="What others say about me."
-          description="These quotes are written to reflect the kind of cross-functional feedback that follows strong UI ownership, accessible delivery, and reliable collaboration."
+          description="Yes, they're all real people. I promise!"
         />
         <div className="card-grid three-up">
           {testimonials.map((item) => (
