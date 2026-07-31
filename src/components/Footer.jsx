@@ -14,8 +14,9 @@ function Footer() {
         <div className="footer-links">
           <Link to="/about">About</Link>
           <Link to="/resume">Phil's Resume</Link>
-          <Link to="/game">Snake</Link>
-          <Link to="/space-invaders">Sleep Invaders</Link>
+          <Link className="desktop-only" to="/game">Snake</Link>
+          <Link className="desktop-only" to="/space-invaders">Sleep Invaders</Link>
+          <Link className="mobile-only" to="/games">GAMES!</Link>
         </div>
       </div>
       <div className="container footer-meta">

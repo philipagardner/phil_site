@@ -279,20 +279,20 @@ return (
     */}
 
     <section className="section">
-      <div className="container cta-banner">
+      <div className="container cta-banner cta-banner--process">
         <div className="flex-5">
-          <h2>I can deliver the entire process </h2>
-          <div className="brag-text">
-            <ol className='phil-ol'>
-              <li>UI/UX design and prototyping</li>
-              <li>Production-ready front-end code</li>
-              <li>Accessibility implementation and testing</li>
-              <li>Software deployment and monitoring</li>
-            </ol>
+          <h2>I can deliver the entire process</h2>
+          <div className="process-flow" aria-label="Linear process steps">
+            {['Design', 'Development', 'Deployment', 'DevOps'].map((step, index) => (
+              <div className="process-step" key={step}>
+                <span className="process-step-number">0{index + 1}</span>
+                <span className="process-step-title">{step}</span>
+              </div>
+            ))}
           </div>
         </div>
-        <div className="flex-1 flex-space-evenly">
-        <a className="button button-primary" href="mailto:Philipgardner7@gmail.com">Email Me</a>
+        <div className="flex-1 cta-actions">
+          <a className="button button-primary" href="mailto:Philipgardner7@gmail.com">Email Me</a>
         </div>
       </div>
     </section>
