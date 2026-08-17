@@ -20,6 +20,8 @@ import trainingImage from '../assets/images/training.png';
 import visualStudioCodeImage from '../assets/images/Visual_Studio_Code.png';
 import w3cImage from '../assets/images/w3c.png';
 import heroImage from '../assets/images/hero-image.png';
+import kecleonImage from '../assets/images/Kecleon.png';
+import dragoniteImage from '../assets/images/Dragonite.png';
 
 const services = [
 {
@@ -176,8 +178,16 @@ return (
     <section className="section projects">
 
       <div className=" container">
+        <div className="projects-header">
+                    <img
+                      className="projects-image"
+                      src={kecleonImage}
+                      alt=""
+                      aria-hidden="true"
+                    />
         <div className="section-heading">
           <h2>My Projects</h2>
+        </div>
         </div>
         <div className="projects-panel">
           <div className="panel-card">
@@ -236,8 +246,8 @@ return (
                 <span className="panel-description">WCAG compliance (per Axe DevTools)</span>
               </div>
               <div className="panel-metric">
-                <span className="panel-highlight">Dynamic</span>
-                <span className="panel-description">standardized UI component library</span>
+                <span className="panel-highlight">Standardized</span>
+                <span className="panel-description">UI component library</span>
               </div>
             </div>
           </div>
@@ -281,7 +291,7 @@ return (
     <section className="section">
       <div className="container cta-banner cta-banner--process">
         <div className="flex-5">
-          <h2>I can deliver the entire process</h2>
+          <h2>I deliver the entire process</h2>
           <div className="process-flow" aria-label="Linear process steps">
             {['Design', 'Development', 'Deployment', 'DevOps'].map((step, index) => (
               <div className="process-step" key={step}>

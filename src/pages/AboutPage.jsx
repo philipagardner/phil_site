@@ -53,7 +53,9 @@ function AboutPage() {
       <section className="section">
         <div className="container">
           <div className="about-text">
-            Hello!
+             Hello! My names Phil, I'm 31 years old and I live in Raleigh, NC with my wonderful wife and our 3 cats- Luca, Levi Pocket, and Tippie.
+             <br />
+             I like a lot of stuff outside of making kick-ass websites. I've recently been trying my hand at making different kinds of art, some of which turned out pretty good if I do say so myself. I've also really enjoyed the movie-a-night routine that with my wife and I started recently- my top 3 films from this would probably be Kindergarten Cop, 28 Days Later, and Fried Green Tomatoes (that one had me balling).
           </div>
         </div>
       </section>

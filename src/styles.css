@@ -50,6 +50,13 @@ textarea {
     min-height: 100vh;
 }
 
+.site-shell {
+    background-image: var(--site-shell-image);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: clamp(180px, 24vw, 360px);
+}
+
 .container {
     width: min(calc(100% - 2rem), var(--max-width));
     margin: 0 auto;
@@ -315,6 +322,30 @@ textarea {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem 1.5rem;
+}
+
+.projects-header {
+    position: relative;
+    padding-left: 7.5rem;
+    margin-bottom: 2rem;
+
+    .section-heading {
+        padding-left: 1rem;
+    }
+}
+
+.projects-image {
+    position: absolute;
+    left: 0;
+    top: -2rem;
+    width: auto;
+    height: auto;
+    max-width: min(140px, 30vw);
+    object-fit: contain;
+}
+
+.projects-header .section-heading {
+    margin-bottom: 0;
 }
 
 .icon-list-section {
@@ -888,7 +919,7 @@ textarea {
     justify-content: space-between;
     gap: 1rem;
     background:
-        radial-gradient(circle at top right, rgba(242, 153, 74, 0.18), transparent 30%),
+        radial-gradient(circle at top right, rgba(242, 153, 74, 0.08), transparent 30%),
         rgba(255, 255, 255, 0.65);
 }
 
@@ -1012,9 +1043,10 @@ textarea {
 .footer-wrap,
 .footer-meta {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 1rem;
+    flex-direction: column;
 }
 
 .footer-wrap {

@@ -21,7 +21,6 @@ function Footer() {
       </div>
       <div className="container footer-meta">
         <p>&copy; {new Date().getFullYear()} Phil A. Gardner</p>
-        <p>Raleigh, NC</p>
       </div>
     </footer>
   );
