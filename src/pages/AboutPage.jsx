@@ -1,7 +1,7 @@
 import PageHero from '../components/PageHero';
 import CaseStudiesSection from '../components/CaseStudiesSection';
 import philAndSamara from '../assets/images/phil-and-samara.jpg';
-import ruffRidge from '../assets/images/ruff-ridge-1.jpg';
+import ruffRidge from '../assets/images/ME.jpg';
 import myReflection from '../assets/images/my-reflection.jpg';
 
 const approach = [
@@ -94,10 +94,10 @@ function AboutPage() {
 
       <CaseStudiesSection />
       */}
+      {/*
       <section className="section">
         <div className="container">
           <div className="section-heading">
-           {/* <p className="eyebrow">My Muses</p> */}
             <h2>What keeps me going</h2>
           </div>
           <div className="card-grid three-up">
@@ -110,6 +110,7 @@ function AboutPage() {
           </div>
         </div>
       </section>
+      */}
     </>
   );
 }

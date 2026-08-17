@@ -151,7 +151,7 @@ return (
           <p className="eyebrow">UI/UX Development, AI Component Integration, Accessibility Specialist</p>
           <h1>Making dynamic, engaging interfaces.</h1>
           <p className="hero-text">
-            Hey! I'm Phil Gardner, a guru of responsive front-end development, WCAG 2.2 accessibility, and custom UI for agentic AI experiences.
+            Hey! I'm Phil Gardner, a guru of responsive front-end development, WCAG accessibility, and Human Computer Interaction (HCI).
           </p>
         </div>
       </div>

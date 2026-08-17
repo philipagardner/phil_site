@@ -404,6 +404,30 @@ textarea {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.08));
 }
 
+.testimonials-header {
+    position: relative;
+    padding-left: 7.5rem;
+    margin-bottom: 2rem;
+
+    .section-heading {
+        padding-left: 1rem;
+    }
+}
+
+.testimonials-image {
+    position: absolute;
+    left: 0;
+    top: -2rem;
+    width: auto;
+    height: auto;
+    max-width: min(140px, 30vw);
+    object-fit: contain;
+}
+
+.testimonials-header .section-heading {
+    margin-bottom: 0;
+}
+
 .temp-section {
     background-color: darksalmon;
 }

@@ -9,7 +9,7 @@ function Footer() {
             <span className="brand-mark">PG</span>
             <span className="brand-text">Phil Gardner</span>
           </Link>
-          <p>UX engineer and front-end developer focused on accessible product interfaces, AI chat UI, and responsive design systems.</p>
+          <p>UX engineer and front-end developer with mastery in accessible, responsive design.</p>
         </div>
         <div className="footer-links">
           <Link to="/about">About</Link>
