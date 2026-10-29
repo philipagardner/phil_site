@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import ChatWidget from './ChatWidget';
 import funkyEdgeImage from '../assets/images/funky_edge.png';
 
 function ScrollToTop() {
@@ -25,6 +26,7 @@ function SiteLayout() {
       <main>
         <Outlet />
       </main>
+      <ChatWidget />
       <Footer />
     </div>
   );
