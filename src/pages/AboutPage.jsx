@@ -3,6 +3,17 @@ import CaseStudiesSection from '../components/CaseStudiesSection';
 import philAndSamara from '../assets/images/phil-and-samara.jpg';
 import ruffRidge from '../assets/images/ME.jpg';
 import myReflection from '../assets/images/my-reflection.jpg';
+import enterprise from '../assets/images/enterprise.jpeg';
+import potionHut from '../assets/images/potion_hut.jpeg';
+import tippie from '../assets/images/tippie.jpeg';
+import philWorth from '../assets/images/phil_worth.jpeg';
+
+const scrapbook = [
+  { src: enterprise, alt: 'Enterprise', caption: 'My painting of the USS Enterprise' },
+  { src: potionHut, alt: 'Potion Hut', caption: 'A diorama I made of a little Potion Hut' },
+  { src: tippie, alt: 'Tippie', caption: 'Tippie not letting me work' },
+  { src: philWorth, alt: 'Phil Worth', caption: 'Me and my nephew, Worth' },
+];
 
 const approach = [
   {
@@ -50,12 +61,25 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section-small">
         <div className="container">
           <div className="about-text">
              Hello! My names Phil, I'm 31 years old and I live in Raleigh, NC with my wonderful wife and our 3 cats- Luca, Levi Pocket, and Tippie.
              <br />
              I like a lot of stuff outside of making kick-ass websites. I've recently been trying my hand at making different kinds of art, some of which turned out pretty good if I do say so myself. I've also really enjoyed the movie-a-night routine that with my wife and I started recently- my top 3 films from this would probably be Kindergarten Cop, 28 Days Later, and Fried Green Tomatoes (that one had me balling).
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="scrapbook">
+            {scrapbook.map((item) => (
+              <figure className="scrapbook-item" key={item.alt}>
+                <img src={item.src} alt={item.alt} loading="lazy" />
+                <figcaption>{item.caption}</figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>
