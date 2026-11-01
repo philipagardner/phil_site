@@ -296,7 +296,7 @@ async function callLlm(messages, toolList = llmTools) {
         temperature: 0.3
       }
     }),
-    signal: AbortSignal.timeout(60000)
+    signal: AbortSignal.timeout(50000)
   });
 
   if (!response.ok) {
@@ -373,7 +373,19 @@ async function runAgent(history) {
         continue;
       }
 
-      return { reply: content, toolsUsed, ui, game };
+      const leakedToolName = toolDefinitions.some((tool) =>
+        new RegExp(`\\b${tool.name}\\b`, 'i').test(content)
+      );
+      const cleaned = toolDefinitions
+        .reduce((text, tool) => text.replace(new RegExp(`\\b${tool.name}\\b`, 'gi'), ''), content)
+        .replace(/[ \t]+\n/g, '\n')
+        .trim();
+
+      if (leakedToolName && !ui && /offer_button_game/i.test(content)) {
+        ui = 'button_game_offer';
+      }
+
+      return { reply: cleaned, toolsUsed, ui, game };
     }
 
     messages.push(message);
@@ -447,7 +459,7 @@ app.post('/api/chat', async (req, res) => {
       throw new Error('Empty reply from model');
     }
 
-    const replyOffersGame = /button game/i.test(reply) && /\?\s*$/.test(reply);
+    const replyOffersGame = /button game/i.test(reply) && /\?/.test(reply);
 
     if (!ui && replyOffersGame) {
       return res.json({ reply, toolCallSummary: toolsUsed, ui: 'button_game_offer', game });
@@ -460,6 +472,10 @@ app.post('/api/chat', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`Portfolio agent running on http://localhost:${PORT}`);
-});
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`Portfolio agent running on http://localhost:${PORT}`);
+  });
+}
+
+export default app;
