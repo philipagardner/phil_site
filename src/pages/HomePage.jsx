@@ -13,6 +13,9 @@ import githubImage from '../assets/images/github.png';
 import htmlImage from '../assets/images/html.png';
 import illustratorImage from '../assets/images/illustrator.png';
 import javascriptImage from '../assets/images/javascript.png';
+import typescriptImage from '../assets/images/Typescript_logo_2020.svg.webp';
+import agenticAiImage from '../assets/images/ai.png.png';
+import reactImage from '../assets/images/React-icon.svg.webp';
 import musicImage from '../assets/images/music.png';
 import photoshopImage from '../assets/images/Photoshop.png';
 import serviceNowImage from '../assets/images/servicenow.png';
@@ -98,14 +101,14 @@ const iconItems = [
 { title: 'HTML', image: htmlImage },
 { title: 'CSS', image: cssImage },
 { title: 'JavaScript', image: javascriptImage },
-{ title: 'Bootstrap', image: bootstrapImage },
+{ title: 'TypeScript', image: typescriptImage },
 { title: 'WCAG', image: w3cImage },
 { title: 'VS Code', image: visualStudioCodeImage },
 { title: 'Figma', image: figmaImage },
-{ title: 'VCS', image: githubImage },
+{ title: 'Agentic AI', image: agenticAiImage },
 { title: 'ServiceNow', image: serviceNowImage },
 { title: 'Illustrator', image: illustratorImage },
-{ title: 'Photoshop', image: photoshopImage },
+{ title: 'React', image: reactImage },
 { title: 'AG-UI/A2UI', image: agUiImage },
 { title: 'Team-building', image: activitiesImage },
 { title: 'Peer Training', image: trainingImage },
