@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import ButtonGame, { DEFAULT_GAME } from './ButtonGame';
+import chatIcon from '../assets/images/chat-icon.webp';
 
 const initialMessages = [
   {
@@ -143,7 +144,7 @@ function ChatWidget() {
           aria-label="Open AI assistant"
           aria-expanded={isOpen}
         >
-          💬
+          <img src={chatIcon} alt="" className="chat-toggle-icon" />
         </button>
       )}
 
